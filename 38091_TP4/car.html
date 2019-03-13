@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mobil</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var pos = 0;
+		$(document).ready(function(){
+			$("button").click(function(){
+				//if(pos == $(""))
+				var width = $("#car").width();
+				if(pos+width >= ($("#control").width()-50)){
+					return;
+				}
+				
+				if($(this).attr("id") == "maju10"){;
+					pos += 10;
+				} else if($(this).attr("id") == "maju1"){
+					pos += width;
+				} else if($(this).attr("id") == "maju2"){
+					pos += width*2;
+				} else if($(this).attr("id") == "mundur10"){
+					pos -= 10;
+				} else if($(this).attr("id") == "mundur1"){
+					pos -= width;
+				} else if($(this).attr("id") == "mundur2"){
+					pos -= width*2;
+				}
+				//alert("qoq");
+				$("#car").animate({marginLeft: pos+'px'});
+			});
+		});
+	</script>
+	<style type="text/css">
+		#batas {
+			background: red;
+			width: 10px;
+			height: 500px;
+			float: right;
+			margin-right: 50px;
+		}
+		#car {
+			background-image: url("car.png");
+			width: 512px;
+			height: 512px;
+		}
+	</style>
+</head>
+<body>
+	<div id="area">
+		<div id="batas"></div>
+		<div id="car"></div>
+		
+	</div>
+	
+	<br>
+	<div id="control">
+		<button id="maju10">Maju 10 Pixel =></button>
+		<button id="maju1">Maju 1 Langkah =></button>
+		<button id="maju2">Maju 2 Langkah =></button>
+		<button id="mundur10"><= Mundur 10 Pixel</button>
+		<button id="mundur1"><= Mundur 1 Langkah</button>
+		<button id="mundur2"><= Mundur 2 langkah</button>
+	</div>
+	
+	
+	
+
+</body>
+</html>

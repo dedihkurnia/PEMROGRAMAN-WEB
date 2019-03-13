@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nama hewan</title>
+	<style type="text/css">
+		button {
+			margin: 5px;
+		}
+		#selected {
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="hewan.json"></script>
+	<script type="text/javascript">
+		var jHewan = JSON.parse(Hewan);
+
+		function btnClick(v){
+			$("#hew").empty();
+			for(var i = 0; i<jHewan[v].length; i++){
+				$("#hew").append("<div>- "+jHewan[v][i]+"</div>");
+			}
+			$("button").removeAttr("id");
+			$("."+v).attr("id", "selected");
+			
+		}
+
+		$(document).ready(function(){
+
+			$(document).keypress(function(event){
+				//alert(String.fromCharCode(event.charCode).toUpperCase());
+				btnClick(String.fromCharCode(event.charCode).toUpperCase());
+			});
+			//alert(jHewan.length);
+			/*
+			var A = ["Ayam", "Anjing", "Angsa"];
+			var B = ["Babi", "Banteng"];
+			var C = ["Cacing", "Celak"];
+			var D = ["Domba", "Dongkang"];
+			var E = ["Eyang Subur"];
+			var F = ["Flamingo", "Foo"];
+			var G = ["Gajah", "Gerang"];
+			var H = ["Hayam", "Hantu"];
+			var I = ["Ikan", "Invoker"];
+			var J = ["Jalak", "Jaran"];
+			var K = ["Kambing", "Kancil"];
+			var L = ["Lolok", "Lintah"];
+			var M = ["Makao"];
+			var N = ["Nyam - Nyam", "Nyai"];
+			var O = ["Opok", "Onta"];
+			var P = ["Pelikan", "Pacar"];
+			var Q = ["QiuQiu", "Qeee"];
+			var R = ["Rusa", "Rahasia"];
+			var S = ["Salmon", "Sirsak"];
+			var T = ["Teli", "Tampan"];
+			var U = ["Ursa", "Unta"];
+			var V = ["Vletan", "Vampir"];
+			var W = ["Wewegombel", "Whooo"];
+			var X = ["Xcalibur", "Xerem"];
+			var Y = ["Yaw", "Yoo"];
+			var Z = ["Zebra", "Zoro"];
+
+			*/
+			for(var i = 0; i<26; i++){
+				var c = String.fromCharCode(65 + i);
+				var click = 'btnClick("'+c+'");';
+				$("#btn").append("<button class='"+c+"' onClick='"+click+"'>"+c+"</button>");
+			}
+			
+
+		});
+	</script>
+</head>
+<body>
+	<div id="btn">
+	</div>
+	<div id="hew">
+	</div>
+</body>
+</html>
