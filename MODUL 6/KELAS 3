@@ -1,0 +1,26 @@
+<?php
+	$un=(isset($_POST['uname'])?$_POST['uname'] : '');
+	$pw=(isset($_POST['pwd'])? $_POST['pwd'] : '');
+	if ($uname!=""){
+		//echo "<script>document.location='utama.php?uname=$un';</script>
+		header('Location : utama.php?uname='.$un);
+	}
+	else{
+		echo"<script>alert('Anda tidak boleh login');</script>";
+	}
+}
+?>
+<form method ="post">
+	Username:<input type="text" name ="uname"><br><br>
+	Password:<input type="text" name ="pwd">
+	<input type="sumbit" name="login" value="Login">
+</form>
+
+================================
+
+<?php
+	$un=$_GET['uname'];
+	echo "selamat datang $un <br>";
+	//echo "Selamat Datang".$un."<br>";
+	echo "anda masuk ke halaman utama<br>";
+?>
