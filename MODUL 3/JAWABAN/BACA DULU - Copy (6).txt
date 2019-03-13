@@ -1,0 +1,15 @@
+file modul3soal 1&2 adalah kunci jawaban modul 3 JS kemarin.
+file asistensi adalah file jurnal yang diubah syntax js nya ke jquery.
+
+jangan lupa download terlebih dahulu jquery-3.2.1.min.js lalu simpan dalam folder yang sama agar file asistensi tidak error.
+
+perhatikan setiap baris syntaxnya terutama di bagian head,script,style.
+
+JQUERY YANG ADA PADA FILE DAN JUGA MODUL MASIH DASAR..
+DIHARAPKAN PRAKTIKAN EXPLORE LEBIH LAGI VIA INTERNET ATAU SUMBER LAINNYA..
+
+referensi yang biasa digunakan :
+-w3school,
+-stackoverflow (dengan mengetik keyword di kolom search),
+-google :v
+ bisa menggunakan keyword yang diinginkan sesuai kebutuhan(disarankan memakai bahasa Inggris).

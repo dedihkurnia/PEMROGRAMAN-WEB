@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+	$(document).ready(function(){
+		$("input[type=button]").click(function(){
+			alert("halo nama saya Upin.");    
+		});
+	
+		$("#over").mouseover(function(){
+			$("#over").css("visibility","hidden");    
+		});
+	
+		$("#over").mouseout(function(){
+			$("#over").css("visibility","visible");    
+		});
+		
+		$("textarea").keypress(function(){
+			$("#press").css("display","none");
+		});
+	
+		$("#nama").focus(function(){
+			$("#sorot").html("Nama disorot");    
+		});
+		$("#nama").blur(function(){
+			$("#sorot").html("Nama tidak disorot");    
+		});
+	
+	});
+	</script>
+	</head>
+    <body>
+		<input type="button" value="klik disini"/><br />
+		<p id="over">Saat mouse lewat diatas ini</p><br />
+		<textarea>
+        fjdisojfisdjfildsjflds
+		</textarea><span id="press">tulisan hilang saat keyboard sedang ditekan</span><br>
+		<input type="text" value="Nama" id="nama"/><div id="sorot"></div>
+
+		
+	
+		<br /><br />
+		
+		
+		
+	</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+    <script type="text/javascript">
+    function eventsemua(){
+		document.getElementById("ubah").addEventListener("click",ubah) ;
+		document.getElementById("hapus").addEventListener("click",hapus) ;
+		document.getElementById("ukuran").addEventListener("click",ukuran) ;
+		document.getElementById("warna").addEventListener("click",warna) ;
+		document.getElementById("bg").addEventListener("click",bg) ;
+	}
+    
+		  function ubah(){
+	document.getElementById("tls").style.fontFamily="Algerian";
+	
+	}
+	
+	  function hapus(){
+	document.getElementById("tls").remove();
+	}
+
+	  function ukuran(){
+	document.getElementById("tls").style.fontSize="80px";
+	}
+		  function warna(){
+	document.getElementById("tls").style.color="red";
+	}
+		  function bg(){
+	document.getElementById("tls").style.backgroundColor="black";
+	}
+    
+    </script>
+	</head>
+
+	<body onload="eventsemua()">
+    <br /><br />
+	<span id="tls" >Tulisan</span><br />
+		<input type="button" id="ubah" value="ubah tulisan"/>
+		<input type="button" id="hapus" value="hapus tulisan" />		
+		<input type="button" id="ukuran" value="ubah ukuran" />
+		<input type="button" id="warna" value="ubah warna tulisan" />
+		<input type="button" id="bg" value="ubah warna background"  />
+	</body>
+
+</html>
