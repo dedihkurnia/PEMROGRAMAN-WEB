@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>THE MOVIES</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>    
+    
+    body {
+    background-color: #787878;
+    }
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    #btn2 {
+      background-color: #337ab7;
+    }
+  </style>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var tog = true;
+      $(".btn-like").click(function(){
+        if(tog){
+          $(".btn-like").attr("id","btn2");
+        } else {
+          $(".btn-like").attr("id", "");
+        }
+        tog = !tog;
+      });
+      var tog2 = true;
+      $(".btn-info").cick(function(){
+        if(tog2){
+          $(".info2").css("visibility", "hidden");
+          $(".info").css("visibility", "visible");
+        } else {
+          $(".info2").css("visibility", "visible");
+          $(".info").css("visibility", "hidden");
+        }
+        tog2 = !tog2;
+      });
+    });
+  </script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+     
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group input-group">
+          <input type="text" class="form-control" placeholder="Search..">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>        
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container text-center">    
+  <div class="row">
+    <div class="col-sm-3 well">
+      <div class="well">
+       
+        <img src="https://scontent-ort2-1.cdninstagram.com/t51.2885-19/s150x150/17125550_1739320066381897_3854259881418686464_a.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        <br> </br>
+         <p><a href="#">My Profile</a></p>
+      </div>
+      <div class="well">
+        <p><a href="#">TENTANG FILM</a></p>
+        <p>
+          <a href="https://youtu.be/1Vt64QJ9oQg" target="_blank"><span class="label label-default">THREE POINT LIGHTING</span></a>
+          <a href="https://youtu.be/-6f4E4ofZPU" target="_blank"><span class="label label-info">TEKNIK GREENSCREEN</span></a>
+          <a href="https://www.youtube.com/watch?v=HxXNTex-QuU" target="_blank"><span class="label label-primary">FILM YANG AKAN DATANG 2018</span></a>
+          <a href="http://www.21cineplex.com/theater/bioskop-transmart-buah-batu-xxi,416,BDGTRBB.htm" target="_blank"><span class="label label-warning">JADWAL BIOSKOP XXI TRANSMART<br>
+          BUBAT TERBARU</span></a>
+          <a href="https://id.bookmyshow.com/buytickets/cgv-bec-mall/cinema-bdjv-ZBCM-MT/20180225" target="_blank"><span class="label label-danger">JADWAL BIOSKOP BLITZ BEC TERBARU</span>
+          <a href="https://www.youtube.com/channel/UCp0LlTR2Q64S1-67OJT_akg" target="_blank"><span class="label label-success">FILM PRODUKSI SENDIRI</span></a>
+        </p>
+      </div>
+      <div class="alert alert-success fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        <p><strong>HAI!</strong></p>
+        Silahkan memanjakan mata dengan tips dan film di blogku :).
+      </div>
+      <p><a href="http://www.google.com" target= "_blank">MY FACEBOOK</a></p>
+      <p><a href="https://twitter.com/search?q=dedih%20kurnia&src=typd" target="_blank">MY TWITTER</a></p>
+      <p><a href="https://www.instagram.com/kurniadedih/">MY INSTAGRAM</a></p>
+    </div>
+    <div class="col-sm-7">
+    
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default text-left">
+            <div class="panel-body">
+              <center><h1><p> EVERYTHING ABOUT MOVIE </p>
+              <button type="button" class="btn btn-default btn-sm btn-like">
+                <span class="glyphicon glyphicon-thumbs-up"></span> Like 
+              </button> </center>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p>M.Restu Assegaf</p>
+           <img src="https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s480x480/e35/c236.0.608.608/16122612_354273051625002_4120850163633750016_n.jpg?ig_cache_key=MTQyODYzMjQ1NjEzNTYxODYyOA%3D%3D.2.c" class="img-circle" height="55" width="55" alt="Avatar">
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>wah kontennya sangat membantu dalam menyelesaikan skripsi saya semoga blognya makin maju :).</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p>FIRMAN RAMDHANI</p>
+           <img src="https://pbs.twimg.com/profile_images/744163408627392512/goYDOgcW.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>kontennya menarik patut di acungi jempol (y).</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p>ardiansyah m.p</p>
+           <img src="https://i.ytimg.com/vi/hXX4AqswX_U/maxresdefault.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>kontenya membuat saya semangat dalam pembuatan film lagi.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p>Ligya Cherika Prameswari</p>
+           <img src="https://scontent.fcgk2-1.fna.fbcdn.net/v/t1.0-0/p206x206/27972377_896733887171368_3801812089242632677_n.jpg?oh=a22088b1446853341703d4628c2308c4&oe=5B459F37" class="img-circle" height="55" width="55" alt="Avatar">
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>webnya membantu untuk menyeklesaikan tugas kuliah saya terimakasih :).</p>
+          </div>
+        </div>
+      </div>     
+    </div>
+    <div class="col-sm-2 well">
+      <div class="thumbnail">
+        <div class="info" hidden>
+          <p>Paris</p>
+        </div>
+        <div class="info2">
+          <p>ABOUT ME:</p>
+          <img src="https://lh3.googleusercontent.com/-JH7GFMppsfA/Wm8khG-afpI/AAAAAAAAFF4/wGC_Fyl5n4EHXCUpbaL6sYVR89I9PUHqACEwYBhgL/w140-h140-p/a948e3b6-7256-4045-98ee-9c07e3afc8cb" alt="Paris" width="120" height="80">
+          <p><strong>DEDIH KURNIA</strong></p>
+          <p>BANDUNG, 3 MARCH 1998</p>
+        </div>
+        <button class="btn btn-primary btn-info">Info</button>
+      </div>      
+      <div class="well">
+        <embed width="120" height="100" src="https://www.youtube.com/v/SgcDLlKeKVc?autoplay=1">
+      </div>
+      <div class="well">
+        <p><canvas id="canvas" width="400" height="400"
+style="background-color:#333">
+</canvas>
+
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'white');
+  grad.addColorStop(1, '#333');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+</script></p>
+      </div>
+    </div>
+  </div>
+</div>
+</h1>
+</center>
+<footer class="container-fluid text-center">
+
+      <button class="btn btn-primary btn-info" target = "_blank">>>> NEXT PAGE</button>
+
+</footer>
+</body>
+</html>
