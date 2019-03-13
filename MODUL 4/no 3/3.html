@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form_1301164077</title>
+	<style type="text/css">
+		#tabel {
+			border: 1px solid black;
+			background: black;
+			padding: 8px;
+		}
+		#mhs {
+			padding: 8px;
+			color: white;
+			font-weight: bold;
+		}
+		x {
+			color: red;
+		}
+
+		#jeniskel {
+			color: grey;
+		}
+		
+	</style>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var jMahasiswa = [];
+		function hapus(id){
+			if(confirm("Apakah anda yakin mau ngapus data ini?")){
+				var jo = [];
+				for(var i = 0; i<jMahasiswa.length; i++){
+					if(i != id){
+						var v = jMahasiswa[i];
+						jo.push(v);
+					}
+				}
+				jMahasiswa = jo;
+				refreshTable();
+			}
+		}
+
+		function refreshTable(){
+			$("#data").empty();
+			var row = "<tr></tr>";
+			$("#data").append(row);
+			var col1 = "<th>Nama</th>";
+			var col2 = "<th>NIM</th>";
+			var col3 = "<th>Kelas</th>";
+			var col4 = "<th>Jenis Kelamin</th>";
+			var col5 = "<th>Action</th>";
+			$("tr").append(col1, col2, col3, col4, col5);
+			
+			for(var i = 0; i<jMahasiswa.length; i++){
+
+				row = "<tr id='row" +i+ "'></tr>";
+				$("#data").append(row);
+				var col1 = "<td>" + jMahasiswa[i]["nama"] + "</td>";
+				var col2 = "<td>" + jMahasiswa[i]["nim"] + "</td>";
+				var col3 = "<td>" + jMahasiswa[i]["kelas"] + "</td>";
+				var col4 = "<td>" + jMahasiswa[i]["jk"] + "</td>";
+				var col5 = "<td><button onClick='hapus("+i+");'>Hapus</button></td>";
+				$("#row"+i).append(col1, col2, col3, col4, col5);
+				
+					
+			}
+		}
+
+		$(document).ready(function(){
+			
+			$("button").click(function(){
+				if($(this).attr("id") == "simpan"){
+					
+					var nama = $("#nama").val();
+					var nim = $("#nim").val();
+					var kelas = $("#kelas").val();
+					var jk = $("input[name=jk]:checked").val();
+
+					var mhs = {};
+					mhs["nama"] = nama;
+					mhs["nim"] = nim;
+					mhs["kelas"] = kelas;
+					mhs["jk"] = jk;
+
+					jMahasiswa.push(mhs);
+					refreshTable();
+				}				
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<h2>dedih kurnia - 1301164077</h2>
+	<div id="tabel">
+		<div id="mhs">
+			Nama 	: <input type="text" id="nama">
+		</div>
+		<div id="mhs">
+			NIM 	: <input type="text" id="nim">
+		</div>
+		<div id="mhs">
+			Kelas 	: <input type="text" id="kelas">
+		</div>
+		<div id="jeniskel">
+			<x id="mhs">Jenis Kelamin : </x>
+			<input type="radio" name="jk" value="Laki-laki" id="jk1">Laki-laki
+			<input type="radio" name="jk" value="Perempuan" id="jk2">Perempuan
+		</div>
+		<div>
+			<button id="simpan">Simpan</button>
+		</div>
+	</div>
+	<div>
+		<table id="data" border="1">
+		</table>
+	</div>
+</body>
+</html>

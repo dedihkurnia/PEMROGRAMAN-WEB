@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>belajar</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			var angka = Math.floor((Math.random()*9)+1);
+			var box_ajaib = "box"+angka;
+			var jumlah_klik = 0;
+			var ketemu = "belum";
+	
+		$("div").click(function(){
+			jumlah_klik++;
+			$("#hitung").html("jumlah_klik = "+jumlah_klik);
+			if ($(this).attr("id")== box_ajaib){
+				$(this).css("background-color","green");
+				ketemu = "sudah";
+			}
+			else{
+				$(this).css("background-color","red");
+			}
+			if((ketemu=="sudah")&&(jumlah_klik<=3)){
+				$("#hasil").html("You Win!");
+			}
+			if((ketemu=="belum")&&(jumlah_klik>=3)){
+				$("#hasil").html("Game over");
+			}
+		});
+	});
+</script>
+	<style>
+		div{
+			width: 70px;
+			height: 70px;
+			background-color: silver;
+			border: 2px solid black;
+			padding: 0 10px;
+			float: left;
+			margin: 5px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<h2>Game "kotak" </h2>
+<p> Anda hanya punya 3 kali klik untuk menemukan kotak hijau</p>
+<div id = "box1"></div><div id = "box2"></div><div id = "box3"></div><br style="clear:both"/>
+<div id = "box4"></div><div id = "box5"></div><div id = "box6"></div><br style="clear:both"/>
+<div id = "box7"></div><div id = "box8"></div><div id = "box9"></div><br style="clear:both"/>
+<h3 id ="hitung"></h3>
+<h1 id ="hasil"></h1>
+
+</body>
+</html>

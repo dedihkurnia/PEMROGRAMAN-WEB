@@ -1,0 +1,53 @@
+{
+    "mahasiswa":[
+        {
+            "nama":"Muhammad Kuncoro",
+            "nim":"1301171234",
+            "kelas":"IF-41-13"
+        },
+        {
+            "nama":"Kirana Nur Khotimah",
+            "nim":"1301179010",
+            "kelas":"IF-41-14"
+        },
+        {
+            "nama":"Edi Suryaman",
+            "nim":"1301164585",
+            "kelas":"IF-40-17"
+        },
+        {
+            "nama":"Rizqi Munawarman",
+            "nim":"130116666",
+            "kelas":"IF-40-13"
+        },
+        {
+            "nama":"Indah Nur Fitri",
+            "nim":"1301176599",
+            "kelas":"IF-41-15"
+        },
+        {
+            "nama":"Maulana Ahmad Rizqi",
+            "nim":"1301177845",
+            "kelas":"IF-41-18"
+        }
+    ],
+    "dosen":[
+        {
+            "nama":"Febriyanthie Stevanie",
+            "bidang_keilmuan":"Image Processing, Recognition System"
+        },
+        {
+            "nama":"Said Al-Faraby",
+            "bidang_keilmuan":"Intelligent System, Learning System"
+        },
+        {
+            "nama":"Novian Anggis Suwastika",
+            "bidang_keilmuan":"Hardware Infrastructur, Computer Network, Computer Security"
+        },
+        {
+            "nama":"Rimba Widhiana Ciptasari",
+            "bidang_keilmuan":"Security System, Data Structure, Algorithm Analysis"
+        }
+    ]
+     
+}

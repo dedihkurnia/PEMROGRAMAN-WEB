@@ -1,0 +1,252 @@
+<html>
+    <head>
+        <title>Jurnal Modul 4</title>
+        <style>
+            #mahasiswa{
+               width: 60%;
+               border-radius: 20px;
+               background-color: #008cff;
+            }
+            #mahasiswa table{
+                width: 95%;
+                padding: 3%;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: #ffffff;
+                border: 1px;
+                border-color: azure;
+            }
+            #dosen{
+               width: 60%;
+               border-radius: 20px;
+               background-color: #ff0055;
+            }
+            #dosen table{
+                width: 95%;
+                padding: 3%;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: #ffffff;
+                border: 1px;
+                border-color: azure;
+            }
+            table thead th{
+                text-align: center;
+            }
+            table tbody th{
+                text-align: left;
+            }
+            table td{
+                text-align: left;
+            }
+            button{
+                height: 30px;
+                margin: 10px;
+                border: 0;
+                border-radius: 5px;
+                color: whitesmoke;
+                padding: 5px;
+            }
+            #button1{
+                background-color: #008cff;
+            }
+            #button2{
+                background-color: #ff0000;
+            }
+            #button3{
+                background-color: #049c18;
+            }
+            #button4{
+                background-color: #9b3a01;
+            }
+            #button5{
+                background-color: #ff00c8;
+            }
+            #button6{
+                background-color: #ff6600;
+            }
+            #button7{
+                background-color: #6f00ff;
+            }
+            #button8{
+                border: 1px;
+                border-color: #0004ff; 
+                background-color: #02005a;
+            }
+            #button9{
+                border: 1px;
+                border-color: #ff004c; 
+                background-color: #5a0014;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>jQuery with JSON</h1>
+        <div id="mahasiswa">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="3">Mahasiswa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Nama</th>
+                        <th>NIM</th>
+                        <th>Kelas</th>
+                    </tr>
+                    <tr>
+                        <td><p id="nama1"></p></td>
+                        <td><p id="nim1"></p></td>
+                        <td><p id="kelas1"></p></td>
+                    </tr>
+                    <tr>
+                        <td><p id="nama2"></p></td>
+                        <td><p id="nim2"></p></td>
+                        <td><p id="kelas2"></p></td>
+                    </tr>
+                    <tr>
+                        <td><p id="nama3"></p></td>
+                        <td><p id="nim3"></p></td>
+                        <td><p id="kelas3"></p></td>
+                    </tr>
+                    <tr>
+                        <td><p id="nama4"></p></td>
+                        <td><p id="nim4"></p></td>
+                        <td><p id="kelas4"></p></td>
+                    </tr>
+                    <tr>
+                        <td><p id="nama5"></p></td>
+                        <td><p id="nim5"></p></td>
+                        <td><p id="kelas5"></p></td>
+                    </tr>
+                    <tr>
+                        <td><p id="nama6"></p></td>
+                        <td><p id="nim6"></p></td>
+                        <td><p id="kelas6"></p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="dosen">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Dosen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Keahlian</th>
+                    </tr>
+                    <tr>
+                        <td><p id="dosen1"></p></td>
+                        <td><p id="keahlian1"></p></td>
+                    </tr>
+                    <tr>
+                        <td><p id="dosen2"></p></td>
+                        <td><p id="keahlian2"></p></td>
+                    </tr>
+                    <tr>
+                        <td><p id="dosen3"></p></td>
+                        <td><p id="keahlian3"></p></td>
+                    </tr>
+                    <tr>
+                        <td><p id="dosen4"></p></td>
+                        <td><p id="keahlian4"></p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br/>
+        <button onclick="mMuncul()" id="button1">Show Mahasiswa </button>
+        <button onclick="dMuncul()" id="button2">Show Dosen</button>
+        <button onclick="mGanti()" id="button3">Change Style Mahasiswa</button>
+        <button onclick="dGanti()" id="button4">Change Style Dosen</button>
+        <button onclick="mPutar()" id="button5"> Show and Rotate Mahasiswa</button>
+        <button onclick="dPutar()" id="button6"> Show and Rotate Dosen</button>
+        <button onclick="showAll()" id="button7">Show ALL</button>
+        <button onclick="hideAll()" id="button8">Hide ALL</button>
+        <button onclick="allToggle()" id="button9">Toggle ALL</button>
+    </body>
+</html>
+<script src="jquery-1.12.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $.getJSON("myJSON.json",function (data) {
+            console.log(data);
+            var i = 0;
+            $.each(data.mahasiswa, function (i, mahasiswa) {
+                $("#nama"+i).html(mahasiswa.nama);
+                $("#nim"+i).html(mahasiswa.nim);
+                $("#kelas"+i).html(mahasiswa.kelas);
+                i++;
+                if(i == 6){
+                    return false;
+                }
+            })
+            var j = 0;
+            $.each(data.dosen, function (j, dosen) {
+                $("#dosen"+j).html(dosen.nama);
+                $("#keahlian"+j).html(dosen.bidang_keilmuan);
+                j++;
+                if(j == 4){
+                    return false;
+                }                
+            }) 
+        })
+    });
+    function mMuncul() {
+        $("#mahasiswa").show(1000);
+        $("#dosen").hide(1000);
+    }
+    function dMuncul() {
+        $("#dosen").show(1000);            
+        $("#mahasiswa").hide(1000);
+    }
+    function mGanti() {
+        $("#mahasiswa").css("background-color", "yellow");
+        $("#mahasiswa table").css("color", "black");
+        $("#mahasiswa table").css("font-family", "Arial");
+    }
+    function dGanti() {
+        $("#dosen").css("background-color", "green");
+        $("#dosen table").css("color", "black");
+        $("#dosen table").css("font-family", "Times New Roman");
+    }
+    function mPutar() {
+        $("#mahasiswa").show(1000, function () {
+            $({deg: 0}).animate({deg: 360}, {
+                step: function(now, fx){
+                    $("#mahasiswa").css({
+                        transform: "rotate(" + now + "deg)"
+                    });
+                }
+            });
+        });
+        $("#dosen").hide(1000);
+    }
+    function dPutar() {
+        $("#dosen").show(1000, function () {
+            $({deg: 0}).animate({deg: 360}, {
+                step: function(now, fx){
+                    $("#dosen").css({
+                        transform: "rotate(" + now + "deg)"
+                    });
+                }
+            });
+        });
+        $("#mahasiswa").hide(1000);
+    }
+    function showAll() {
+        $("#mahasiswa").show();
+        $("#dosen").show();
+    }
+    function hideAll() {
+        $("#mahasiswa").hide();
+        $("#dosen").hide();
+    }
+    function allToggle() {
+        $("#mahasiswa").fadeToggle();
+        $("#dosen").fadeToggle();
+    }
+</script>

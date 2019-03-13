@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hewan_1301164077</title>
+	<style type="text/css">
+		button {
+			margin: 10px;
+		}
+		#selected {
+			background-color: blue;
+		}
+	</style>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="hewan.json"></script>
+		var jHewan = JSON.parse(Hewan);
+
+		function btnClick(v){
+			$("#hew").empty();
+			for(var i = 0; i<jHewan[v].length; i++){
+				$("#hew").append("<div>- "+jHewan[v][i]+"</div>");
+			}
+			$("button").removeAttr("id");
+			$("."+v).attr("id", "selected");
+			
+		}
+</html>
+</head>
