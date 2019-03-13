@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<body>
+	<center>	
+		<style>
+			td{width: 50px; text-align : center;}
+			table{border:#009999;}
+			button{width:48px;}
+		</style>
+		<script>
+			var bl =0;
+			var opr ='+';
+
+			function hitung(par){
+				var layar = document.getElementById("layar");
+				if ((par=='0'|| par =='1' || par == '2' || par =='3' || par == '4' || par =='5' || par == '6' || par =='7' || par == '8' || par =='9')&&layar.value =='0')
+					layar.value = par;
+				else if((par == '0' || par =='1' ||par == '2' || par =='3' ||par == '4' || par =='5' ||par == '6' || par =='7' ||par == '8' || par =='9')&& layar.value !='0')
+					layar.value +=par;
+				else if (par == '+'||par =='-' || par == 'X' || par == '/'){
+					bl=layar.value;
+					layar.value='0';
+					opr = par;
+				}
+				else if (par == '='){
+					if (opr == '+')
+						layar.value=parseInt(b1)+parseInt(layar.value);
+					else if (opr == '-')
+						layar.value = b1-layar.value;
+					//...idem umntuk 'x'dan '/'
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<table border = "3">
+			<tr> <td colspan="4">
+				<input type="text" id = "layar" value ="0"
+					style= "width:220px; text-align:right;"/></td></tr>
+			<tr><td><button onClick ="hitung('7')">7</button></td>
+				<td><button onClick ="hitung('8')">8</button></td>
+				<td><button onClick ="hitung('9')">9</button></td>
+				<td><button onClick ="hitung('-')">-</button></td></tr>
+			<tr><td><button onClick ="hitung('4')">4</button></td>
+				<td><button onClick ="hitung('5')">5</button></td>
+				<td><button onClick ="hitung('6')">6</button></td>
+				<td><button onClick ="hitung('X')">X</button></td></tr>
+			<tr><td><button onClick ="hitung('1')">1</button></td>
+				<td><button onClick ="hitung('2')">2</button></td>
+				<td><button onClick ="hitung('3')">3</button></td>
+				<td><button onClick ="hitung('/')">/</button></td></tr>
+
+
+	</body>
+</center>
+	</body>
+</html>
