@@ -1,0 +1,13 @@
+1. bat folder di lat 1 xampp
+2. download and extract bundle di folder yang di buat
+https://codeigniter.com/download
+3. struktur folder menjadi berikut : (tidak semua di tulis)
+    xampp
+	htdocs
+	   lat1
+	      application
+		config
+		controllers
+		model
+		view
+4. jalankan aplikasi dengan : http://localhost/lat1
